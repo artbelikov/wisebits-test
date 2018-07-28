@@ -1,8 +1,10 @@
 import React from 'react'
 import './style.scss'
 
-export const PageTitle = () => {
+const PageTitle = () => {
   return (
     <h1 className="page-title">The Fifteen Game</h1>
   )
 }
+
+export default PageTitle

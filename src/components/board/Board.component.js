@@ -1,41 +1,40 @@
 import React from 'react'
 import './style.scss'
 import { connect } from 'react-redux'
+import { restart, swapChip} from 'actions'
+import Chip from 'components/chip/Chip.component.js'
 
 class Board extends React.Component{
 
+  chipClick(index){
+    let { space, swapChip} = this.props
+    swapChip(index, space)
+  }
+
+  componentDidMount() {
+    !this.props.order && this.props.restart()
+  }
+
   render(){
+    let { order = [] } = this.props
     return (
       <div className="fifteen-board">
-        <div className="fifteen-cell" style={{'order': 3}}>1</div>
-        <div className="fifteen-cell" style={{'order': 12}}>2</div>
-        <div className="fifteen-cell" style={{'order': 5}}>3</div>
-        <div className="fifteen-cell" style={{'order': 12}}>4</div>
-        <div className="fifteen-cell" style={{'order': 8}}>5</div>
-        <div className="fifteen-cell" style={{'order': 12}}>6</div>
-        <div className="fifteen-cell" style={{'order': 12}}>7</div>
-        <div className="fifteen-cell" style={{'order': 12}}>8</div>
-        <div className="fifteen-cell" style={{'order': 0}}>9</div>
-        <div className="fifteen-cell" style={{'order': 12}}>10</div>
-        <div className="fifteen-cell" style={{'order': 12}}>11</div>
-        <div className="fifteen-cell" style={{'order': 12}}>12</div>
-        <div className="fifteen-cell" style={{'order': 12}}>13</div>
-        <div className="fifteen-cell" style={{'order': 12}}>14</div>
-        <div className="fifteen-cell" style={{'order': 11}}>15</div>
-        <div className="fifteen-cell fifteen-cell-empty" style={{'order': 12}}/>
+        {order.map((value, index) => <Chip click={() => this.chipClick(index)} value={value}/>)}
       </div>
     )
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = ({state}) => {
   return {
-
+    order: state.order,
+    space: state.space
   }
 };
 
 const mapDispatchToProps = {
-
+  restart,
+  swapChip
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Board)

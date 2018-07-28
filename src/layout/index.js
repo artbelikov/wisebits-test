@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.scss'
-import { PageTitle } from 'components/page-title/PageTitle.component.js'
+import PageTitle from 'components/page-title/PageTitle.component.js'
 import Board from 'components/board/Board.component.js'
 
 /**

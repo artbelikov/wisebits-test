@@ -1,0 +1,26 @@
+.fifteen-chip{
+  flex: 0 0 calc(25% - 10px);
+  border: 1px solid #000;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #4d7e47;
+  margin: 5px;
+  font-size: 10vmin;
+  border-radius: 3px;
+  max-width: calc(25% - 10px);
+  cursor: pointer;
+  user-select: none;
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+  &-empty {
+    border-color: transparent;
+    background: none;
+    pointer-events: none;
+    color: transparent;
+  }
+}
