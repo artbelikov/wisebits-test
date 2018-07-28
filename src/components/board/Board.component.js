@@ -15,10 +15,16 @@ class Board extends React.Component{
     !this.props.order && this.props.restart()
   }
 
+  isWin(){
+    let { order = [] } = this.props
+    return order.toString() === '1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0'
+  }
+
   render(){
     let { order = [] } = this.props
+    let classes = `fifteen-board ${this.isWin() ? 'fifteen-board-win' : ''}`
     return (
-      <div className="fifteen-board">
+      <div className={classes}>
         {order.map((value, index) => <Chip click={() => this.chipClick(index)} value={value}/>)}
       </div>
     )
