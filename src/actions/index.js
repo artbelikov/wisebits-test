@@ -3,12 +3,19 @@ import {
   MOVE_UP,
   MOVE_DOWN,
   MOVE_RIGHT,
+  CHEAT,
   MOVE_LEFT
 } from 'actions/action-types'
 
 export const restart = () => {
   return {
     type: RESTART
+  }
+}
+
+export const cheat = () => {
+  return {
+    type: CHEAT
   }
 }
 

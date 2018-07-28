@@ -1,7 +1,8 @@
 import React from 'react'
 import './style.scss'
-import PageTitle from 'components/page-title/PageTitle.component.js'
-import Board from 'components/board/Board.component.js'
+import PageTitle from 'components/page-title/PageTitle.component'
+import Board from 'components/board/Board.component'
+import Toolbar from 'components/toolbar/Toolbar.component'
 
 /**
  * Just a basic layout
@@ -15,6 +16,7 @@ export const Layout = () => {
         <PageTitle/>
       </header>
       <main>
+        <Toolbar/>
         <Board/>
       </main>
     </div>

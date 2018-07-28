@@ -1,5 +1,6 @@
 import { RESTART, MOVE_UP, MOVE_DOWN,
   MOVE_RIGHT,
+  CHEAT,
   MOVE_LEFT } from 'actions/action-types'
 
 const initialState = {}
@@ -40,6 +41,11 @@ export default (state = initialState, { type, payload }) => {
       } else {
         return state
       }
+    case CHEAT:
+      let order = [...Array(16).keys()]
+      order.shift()
+      order = order.concat(0)
+      return {order, space: 15}
     default:
       return state
   }

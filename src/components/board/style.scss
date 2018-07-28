@@ -10,3 +10,23 @@
     pointer-events: none;
   }
 }
+.fifteen-board-toolbar{
+  display: flex;
+  margin: -10px;
+  padding: 10px 10px 30px 10px;
+  flex-wrap: nowrap;
+  > *{
+    margin: 0 10px;
+  }
+}
+.fifteen-board-button{
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  background: #2f609c;
+  color: #fff;
+  font-size: 20px;
+  height: 35px;
+  padding: 0 20px;
+  cursor: pointer;
+}
