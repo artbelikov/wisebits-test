@@ -1,0 +1,10 @@
+.layout{
+  min-width: 480px;
+  max-width: 1024px;
+  &-center{
+    margin: 0 auto;
+  }
+}
+main{
+  padding: 0 20px;
+}
