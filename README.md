@@ -14,7 +14,7 @@
         - **toolbar** - Toolbar with buttons
     - **layout** - Basic page layout
     - **reducers**
-        - **fifteen-reducers.js** - Main reducer
+        - **board-reducer.js** - Main reducer
         - **index.js**
     - **App.js**
     - **index.css** - simple reset
