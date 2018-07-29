@@ -1,8 +1,8 @@
-import React from 'react'
-import './style.scss'
-import PageTitle from 'components/page-title/PageTitle.component'
-import Board from 'components/board/Board.component'
-import Toolbar from 'components/toolbar/Toolbar.component'
+import React from 'react';
+import './style.scss';
+import PageTitle from 'components/page-title/PageTitle.component';
+import Board from 'components/board/Board.component';
+import Toolbar from 'components/toolbar/Toolbar.component';
 
 /**
  * Just a basic layout
@@ -13,12 +13,12 @@ export const Layout = () => {
   return (
     <div className="layout layout-center">
       <header>
-        <PageTitle/>
+        <PageTitle />
       </header>
       <main>
-        <Toolbar/>
-        <Board/>
+        <Toolbar />
+        <Board />
       </main>
     </div>
-  )
-}
+  );
+};
